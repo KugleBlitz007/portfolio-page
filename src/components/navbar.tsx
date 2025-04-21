@@ -79,12 +79,12 @@ export function Navbar() {
   return (
     <>
     {/* @ts-expect-error */}
-    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50 bg-[#ffcacb]">
+    <MTNavbar fullWidth className="bg-pink-800/100 border-0 sticky top-0 z-50 shadow-none">
       <div className="container flex items-center justify-center">
         {/* <Typography color="blue-gray" className="text-lg font-bold">
           Corrinthina
         </Typography> */}
-        <ul className="md:ml-10 items-center gap-8 flex">
+        <ul className="md:ml-10 items-center md:gap-[12vw] gap-[8vw] flex">
           {NAV_MENU.map(({ name, /* icon: Icon, */ href }) => (
             <NavItem 
               key={name} 

@@ -1,60 +1,56 @@
 "use client";
 
 import Image from "next/image";
-import { Input, Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 
 function Hero() {
   return (
-    <header className="bg-[#c44587] p-8">
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
-        <div className="row-start-2 lg:row-auto">
-          {/* @ts-expect-error */}
+    <header className="">
+      <div className="container mx-auto grid min-h-[80vh] w-full grid-cols-1 lg:grid-cols-2 relative">
+        
+        {/* LEFT COLUMN: Text that overflows onto the image */}
+        <div className="z-10 -mb-[20%] h-full mt-[10rem] px-0">
           <Typography
             variant="h1"
-            color="white"
-            className="mb-4 lg:text-5xl !leading-tight text-3xl"
+            color="black"
+            className="text-4xl ml-[20%] mb-20 lg:text-[200px] font-serif font-bold uppercase"
           >
-            Welcome to my personal <br /> portofolio!
+            Welc<span className="text-black">ome</span>
           </Typography>
-          {/* @ts-expect-error */}
           <Typography
-            variant="lead"
-            className="mb-4 !text-white md:pr-16 xl:pr-28"
+            variant="h1"
+            color="black"
+            className="ml-[15%] mb-5 text-5xl lg:text-7xl font-serif"
           >
-            I&apos;m Corrinthina Rabemanantsoa, a passionate content creator based in Canada. Here,
-            you&apos;ll get a glimpse of my journey in the world of content creation, where creativity meets functionality.
+            to my
           </Typography>
-          <div className="grid">
-            {/* @ts-expect-error */}
-            <Typography
-              variant="small"
-              className="mb-2 text-white font-medium"
-            >
-              Your email
-            </Typography>
-            <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-              {/* @ts-ignore */}
-              <Input color="white" label="Enter your email" size="lg" className="border-1 border-b-white" />
-              {/* @ts-expect-error */}
-              <Button color="white" className="w-full px-4 md:w-[12rem]">
-                contact me
-              </Button>
-            </div>
-          </div>
-          {/* <Typography variant="small" className="font-normal !text-gray-500">
-            Read my{" "}
-            <a href="#" className="font-medium underline transition-colors">
-              Terms and Conditions
-            </a>
-          </Typography> */}
+          <Typography
+            variant="h1"
+            className="text-[#c44587] ml-[20%] mb-5 text-4xl lg:text-7xl font-sans font-thin italic"
+          >
+            (personal)
+          </Typography>
+          
+          <div className="w-full flex justify-between mt-3 text-black text-[200px] font-serif font-thin uppercase">
+  {"portfolio".split("").map((letter, index) => (
+    <Typography key={index} variant="h1" className="px-[2%] text-black text-5xl lg:text-[200px] font-serif font-thin uppercase inset-0">
+      {letter}
+    </Typography>
+  ))}
+</div>
+
         </div>
-        <Image
-          width={1024}
-          height={1024}
-          alt="team work"
-          src="/image/avatar1.jpg"
-          className="md:h-[36rem] w-full rounded-xl object-cover"
-        />
+
+        {/* RIGHT COLUMN: Image */}
+        <div className="relative z-0">
+          <Image
+            width={1024}
+            height={1024}
+            alt="team work"
+            src="/image/avatar1.png"
+            className="h-full w-full rounded-xl object-cover opacity-60"
+          />
+        </div>
       </div>
     </header>
   );
