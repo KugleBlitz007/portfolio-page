@@ -52,14 +52,17 @@ const SKILLS = [
 
 export function Skills() {
   return (
-    <section className="px-8">
+    <section id="Skills" className="px-8 py-28">
       <div className="container mx-auto mb-20 text-center">
+        {/* @ts-expect-error */}
         <Typography color="blue-gray" className="mb-2 font-bold uppercase">
           my skills
         </Typography>
+        {/* @ts-expect-error */}
         <Typography variant="h1" color="blue-gray" className="mb-4">
           What I do
         </Typography>
+        {/* @ts-expect-error */}
         <Typography
           variant="lead"
           className="mx-auto w-full !text-gray-500 lg:w-10/12"

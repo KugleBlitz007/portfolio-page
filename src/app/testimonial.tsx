@@ -9,7 +9,7 @@ export function Testimonial() {
 
   return (
     <section className="py-12 px-8 lg:py-24">
-      <div className="container max-w-screen-lg mx-auto">
+      {/* <div className="container max-w-screen-lg mx-auto">
         <div className="container mx-auto mb-20 text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
             What Clients Say
@@ -92,7 +92,7 @@ export function Testimonial() {
             </div>
           </CardBody>
         </Card>
-      </div>
+      </div> */}
     </section>
   );
 }

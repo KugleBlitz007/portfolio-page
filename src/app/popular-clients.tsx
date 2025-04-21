@@ -17,9 +17,11 @@ export function PopularClients() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
+          {/* @ts-expect-error */}
           <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
             POPULAR CLIENTS
           </Typography>
+          {/* @ts-expect-error */}
           <Typography variant="h2" color="blue-gray" className="mb-4">
             Trusted by over 10,000+ <br /> clients
           </Typography>
